@@ -1,25 +1,26 @@
 # Site settings
-title: Klise Theme # site title
+title: gunh0's Tech Blog # site title
 description: >- # site description
-  He's writing in Bahasa about web technology and experience as a journal 
-  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  gunh0's tech blog documenting web technology and security. He shares his learnings based on web technologies and experiences, with a focus on cybersecurity, cloud security automation, and building resilient systems that protect complex cloud environments. Find out more on <a href="https://github.com/gunh0" target="_blank" rel="noopener">@GitHub</a>.
 lang: en-US # default lang
-timezone: Asia/Jakarta # set your timezone
+timezone: Asia/Seoul # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
-repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
-mode: dark # default theme "dark" | "light"
+repo: https://github.com/gunh0/gunh0.github.io # site repo [optional]
+mode: ligth # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Jekyll Klisé # author name
+  name: gunh0 # author name
   bio: >- # tell to the world
-    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
-    meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
-  username: username # general username
-  github: github_username # github username
-  twitter: twitter_username # twitter username
-  facebook: facebook_username # facebook username
-  email: your-email@email.com # email adress
+    I am a Security Research Engineer passionate about mastering the tools of 'Development' and the principles of 'Cybersecurity', striving to balance both in perfect harmony. My focus lies in data-driven security, cloud security automation, and building resilient systems that safeguard complex cloud environments.
+    Meet me <a href="https://github.com/gunh0" target="_blank" rel="noopener">@github</a>.
+  username: gunh0902 # general username
+  github: gunh0 # github username
+  twitter: "" # twitter username (if not used, leave it empty)
+  facebook: gunh0902 # facebook username
+  instagram: gunh0ya # Instagram username
+  linkedin: linkedin.com/in/gunh0902 # LinkedIn profile URL
+  email: devgun@korea.ac.kr # email address
   avatar: /assets/img/avatar.jpg # change with your own avatar
 
 # URL settings
