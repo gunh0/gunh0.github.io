@@ -2,7 +2,7 @@
 layout: post
 title:  "Calculating Modular Exponents with Euclidean Algorithm"
 date:   2024-08-24 00:00:00 +0900
-tags: [cryptography, number-theory, modular-arithmetic]
+tags: [cryptography, number-theory, modular-arithmetic, euclidean-algorithm, modular-exponentiation]
 description: "Learn how to calculate large exponents modulo a prime number using the Extended Euclidean Algorithm and modular arithmetic."
 usemathjax: true
 ---
