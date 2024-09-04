@@ -3,7 +3,7 @@ layout: post
 title:  "Three Essential Security Properties of Cryptographic Hash Functions"
 date:   2024-09-04 00:00:00 +0900
 tags: [cryptography, hash-functions, security, preimage-resistance, collision-resistance]
-description: "Learn about the three essential security properties of cryptographic hash functions: preimage resistance, second preimage resistance, and collision resistance
+description: "Learn about the three essential security properties of cryptographic hash functions: preimage resistance, second preimage resistance, and collision resistance"
 usemathjax: true
 ---
 
