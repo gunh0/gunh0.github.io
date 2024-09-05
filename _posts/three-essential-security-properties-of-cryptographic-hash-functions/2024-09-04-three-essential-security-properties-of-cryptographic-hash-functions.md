@@ -73,7 +73,7 @@ def find_collision(hash_function):
 
 ### Real-World Attack Scenarios
 
-1. **Preimage Attack**: An attacker tries to find a message that matches a given hash value.
+**Preimage Attack**: An attacker tries to find a message that matches a given hash value.
 
 ```python
 # Attacker's goal: Find m where H(m) = target_hash
@@ -84,7 +84,7 @@ def preimage_attack(target_hash):
             return candidate  # Should be computationally infeasible
 ```
 
-2. **Collision Attack**: An attacker tries to find two different messages with the same hash value.
+**Collision Attack**: An attacker tries to find two different messages with the same hash value.
 
 ```python
 # Birthday attack demonstration
@@ -98,6 +98,8 @@ def birthday_attack(hash_function, messages=2^32):
         hash_table[h] = message
 ```
 
+<br/>
+
 ### Mathematical Security Analysis
 
 For an ideal cryptographic hash function with \(n\)-bit output:
@@ -108,6 +110,8 @@ where \(t\) is the number of attempts
 - Collision Resistance:
 $$P(\text{finding collision}) \approx \frac{t^2}{2^{n+1}}$$
 due to birthday paradox
+
+<br/>
 
 ### Conclusion
 
