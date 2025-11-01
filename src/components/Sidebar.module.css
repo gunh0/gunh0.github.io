@@ -1,0 +1,200 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  background-color: var(--gl-sidebar-bg);
+  border-right: 1px solid var(--gl-border);
+  overflow-y: auto;
+  padding-top: 70px;
+  z-index: 90;
+  transition: transform 0.3s ease;
+}
+
+.sidebarContent {
+  padding: 2rem 1.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gl-text-secondary);
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-bottom: 0.25rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  color: var(--gl-text);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+  background-color: var(--gl-surface);
+  color: var(--gl-orange);
+  text-decoration: none;
+}
+
+.navLink.active {
+  background-color: var(--gl-orange);
+  color: white;
+  font-weight: 600;
+}
+
+.navIcon {
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* 트렌딩 태그 */
+.trendingList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trendingItem {
+  margin-bottom: 0.5rem;
+}
+
+.trendingLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  color: var(--gl-text);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.trendingLink:hover {
+  background-color: var(--gl-surface);
+  border-color: var(--gl-orange);
+  text-decoration: none;
+}
+
+.trendingTag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tagIcon {
+  color: var(--gl-orange);
+}
+
+.tagName {
+  font-weight: 500;
+}
+
+.tagCount {
+  background: linear-gradient(135deg, var(--gl-orange), var(--gl-purple));
+  color: white;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* 모바일 토글 버튼 */
+.toggleButton {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 1rem;
+  z-index: 100;
+  background-color: var(--gl-orange);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(252, 109, 38, 0.3);
+  transition: all 0.3s ease;
+}
+
+.toggleButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(252, 109, 38, 0.4);
+}
+
+.toggleIcon {
+  font-size: 1.2rem;
+  display: block;
+}
+
+/* 모바일 오버레이 */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 85;
+}
+
+.overlay.visible {
+  display: block;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .toggleButton {
+    display: block;
+  }
+}
+
+/* 스크롤바 스타일 */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: var(--gl-sidebar-bg);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--gl-border);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--gl-text-secondary);
+}

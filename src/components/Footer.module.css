@@ -1,0 +1,53 @@
+.footer {
+  background-color: var(--gl-surface);
+  border-top: 1px solid var(--gl-border);
+  margin-top: 4rem;
+  margin-left: 280px;
+  padding: 2rem 0;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    margin-left: 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.social a {
+  color: var(--gl-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.social a:hover {
+  color: var(--gl-orange);
+  text-decoration: none;
+}
+
+.copyright {
+  color: var(--gl-text-secondary);
+  font-size: 0.9rem;
+}
+
+.copyright a {
+  color: var(--gl-link);
+}

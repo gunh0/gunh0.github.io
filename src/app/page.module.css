@@ -1,0 +1,187 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--gl-border);
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--gl-orange), var(--gl-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroDescription {
+  font-size: 1.1rem;
+  color: var(--gl-text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 포스트 섹션 */
+.sectionTitle {
+  font-size: 1.75rem;
+  color: var(--gl-text);
+  border-left: 4px solid var(--gl-orange);
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.viewAllLink {
+  color: var(--gl-link);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.viewAllLink:hover {
+  color: var(--gl-orange);
+}
+
+/* 포스트 섹션 */
+.postsSection {
+  margin-top: 3rem;
+}
+
+.postsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.postCard {
+  background-color: var(--gl-surface);
+  border: 1px solid var(--gl-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.postCard:hover {
+  border-color: var(--gl-orange);
+  box-shadow: 0 8px 24px rgba(252, 109, 38, 0.15);
+  transform: translateY(-4px);
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardHeader {
+  margin-bottom: 1rem;
+}
+
+.cardDate {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--gl-text-secondary);
+  background-color: var(--gl-code-bg);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--gl-border);
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--gl-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardLink:hover .cardTitle {
+  color: var(--gl-orange);
+}
+
+.cardDescription {
+  color: var(--gl-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.cardTags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.cardTag {
+  background-color: var(--gl-code-bg);
+  color: var(--gl-text);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  border: 1px solid var(--gl-border);
+  transition: all 0.2s ease;
+}
+
+.cardLink:hover .cardTag {
+  border-color: var(--gl-orange);
+  background-color: var(--gl-orange);
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .postsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .postsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cardContent {
+    padding: 1.25rem;
+  }
+}

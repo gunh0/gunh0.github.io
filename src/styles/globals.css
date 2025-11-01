@@ -1,0 +1,141 @@
+:root {
+  /* GitLab Light Mode Colors */
+  --gl-orange: #fc6d26;
+  --gl-purple: #6b4fbb;
+  --gl-bg: #ffffff;
+  --gl-surface: #f9f9f9;
+  --gl-border: #dbdbdb;
+  --gl-text: #303030;
+  --gl-text-secondary: #666666;
+  --gl-link: #1068bf;
+  --gl-link-hover: #0b5cad;
+  --gl-code-bg: #f5f5f5;
+  --gl-header-bg: #ffffff;
+  --gl-sidebar-bg: #fafafa;
+}
+
+[data-theme='dark'] {
+  /* GitLab Dark Mode Colors */
+  --gl-orange: #fc6d26;
+  --gl-purple: #9475cd;
+  --gl-bg: #1f1f1f;
+  --gl-surface: #2e2e2e;
+  --gl-border: #404040;
+  --gl-text: #fafafa;
+  --gl-text-secondary: #bfbfbf;
+  --gl-link: #63a6e9;
+  --gl-link-hover: #8fc1f3;
+  --gl-code-bg: #2e2e2e;
+  --gl-header-bg: #292929;
+  --gl-sidebar-bg: #262626;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--gl-bg);
+  color: var(--gl-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 모바일에서 메인 컨텐츠 조정 */
+@media (max-width: 1024px) {
+  main {
+    margin-left: 0 !important;
+  }
+}
+
+a {
+  color: var(--gl-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--gl-link-hover);
+  text-decoration: underline;
+}
+
+code {
+  background-color: var(--gl-code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: var(--gl-code-bg);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--gl-orange);
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+blockquote {
+  border-left: 4px solid var(--gl-orange);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--gl-text-secondary);
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--gl-border);
+  margin: 2rem 0;
+}
