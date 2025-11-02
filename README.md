@@ -138,7 +138,3 @@ make serve  # http://localhost:8000
 ## 📝 License
 
 Apache License 2.0 © gunh0
-
----
-
-Built with Next.js 16 | Inspired by GitLab Docs
