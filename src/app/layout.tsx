@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Sidebar from '@/components/Sidebar';
 import { getAllPosts } from '@/lib/posts';
 import '@/styles/globals.css';
+import 'katex/dist/katex.min.css';
 
 export const metadata: Metadata = {
   title: "gunh0's Tech Blog",
@@ -45,6 +46,14 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link 
+          rel="stylesheet" 
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+          integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <Header />
         <Sidebar trendingTags={trendingTags} />

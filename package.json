@@ -10,21 +10,29 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
+    "gray-matter": "^4.0.3",
+    "katex": "^0.16.25",
     "next": "^16.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "gray-matter": "^4.0.3",
+    "rehype-katex": "^7.0.1",
+    "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "remark-math": "^6.0.0",
+    "remark-parse": "^11.0.0",
     "remark-prism": "^1.3.6",
-    "date-fns": "^4.1.0"
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
-    "typescript": "^5.7.2",
     "eslint": "^9.17.0",
-    "eslint-config-next": "^16.0.3"
+    "eslint-config-next": "^16.0.3",
+    "typescript": "^5.7.2"
   }
 }

@@ -3,6 +3,13 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -75,8 +82,13 @@ export async function getPostData(slug: string): Promise<PostData> {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  const processedContent = await remark()
-    .use(html, { sanitize: false })
+  const processedContent = await unified()
+    .use(remarkParse)
+    .use(remarkMath)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeKatex)
+    .use(rehypeStringify)
     .process(content);
   const contentHtml = processedContent.toString();
 
