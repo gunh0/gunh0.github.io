@@ -11,7 +11,7 @@ Cryptographic hash functions are fundamental components of modern cryptography, 
 
 ### 1. Preimage Resistance
 
-Preimage resistance means that given a hash value $h$, it should be computationally infeasible to find any message $m$ such that $H(m) = h$.
+Preimage resistance means that given a hash value \(h\), it should be computationally infeasible to find any message \(m\) such that \(H(m) = h\).
 For example:
 
 ```plaintext
@@ -22,7 +22,7 @@ Given only this hash value, it should be computationally infeasible to find the 
 
 **Mathematical Implications**
 
-For an $n$-bit hash value, the computational complexity of finding a preimage should be $O(2^n)$
+For an \(n\)-bit hash value, the computational complexity of finding a preimage should be \(O(2^n)\)
 
 - This implies that no method significantly more efficient than brute force should exist
 - The property is also known as "one-way property"
@@ -31,7 +31,7 @@ For an $n$-bit hash value, the computational complexity of finding a preimage sh
 
 ### 2. Second Preimage Resistance
 
-Second preimage resistance means that given a message $m_1$, it should be computationally infeasible to find a different message $m_2$ such that $H(m_1) = H(m_2)$.
+Second preimage resistance means that given a message \(m_1\), it should be computationally infeasible to find a different message \(m_2\) such that \(H(m_1) = H(m_2)\).
 
 Practical Example:
 
@@ -49,13 +49,13 @@ if hash(original_message) == hash(malicious_message):
 
 ### 3. Collision Resistance
 
-Collision resistance means it should be computationally infeasible to find any two different messages $m_1$ and $m_2$ such that $H(m_1) = H(m_2)$.
+Collision resistance means it should be computationally infeasible to find any two different messages \(m_1\) and \(m_2\) such that \(H(m_1) = H(m_2)\).
 
 **Relationship Between Properties**
 
 - Collision resistance is stronger than second preimage resistance
 - If a hash function is collision-resistant, it is automatically second preimage resistant
-- Due to the Birthday Paradox, collision attacks on an $n$-bit hash have complexity $O(2^{n/2})$
+- Due to the Birthday Paradox, collision attacks on an \(n\)-bit hash have complexity \(O(2^{n/2})\)
 
 ```python
 # Example demonstrating collision resistance importance
